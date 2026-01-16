@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import './components.css';
+
+:root {
+    /* HSL Color Palette - Premium Dark Theme */
+    --hue-primary: 250;
+    --hue-secondary: 170;
+    --hue-accent: 320;
+
+    --color-bg-primary: hsl(240, 10%, 10%);
+    --color-bg-secondary: hsl(240, 10%, 15%);
+    --color-bg-glass: hsla(240, 10%, 15%, 0.6);
+    --color-surface: hsl(240, 10%, 20%);
+    --color-text-primary: hsl(0, 0%, 100%);
+    --color-text-secondary: hsl(240, 5%, 70%);
+    --color-border: hsla(0, 0%, 100%, 0.1);
+
+    --color-brand: hsl(var(--hue-primary), 70%, 60%);
+    --color-brand-glow: hsla(var(--hue-primary), 70%, 60%, 0.5);
+
+    --color-success: hsl(150, 60%, 50%);
+    --color-warning: hsl(35, 90%, 60%);
+    --color-danger: hsl(350, 70%, 60%);
+
+    /* Animation */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 9999px;
+
+    /* Font */
+    --font-family: 'Outfit', sans-serif;
+}
+
+[data-theme='light'] {
+    --color-bg-primary: hsl(240, 10%, 98%);
+    --color-bg-secondary: hsl(240, 10%, 94%);
+    --color-bg-glass: hsla(240, 10%, 94%, 0.6);
+    --color-surface: hsl(240, 10%, 90%);
+    --color-text-primary: hsl(240, 10%, 10%);
+    --color-text-secondary: hsl(240, 5%, 40%);
+    --color-border: hsla(240, 10%, 10%, 0.1);
+    --color-brand: hsl(var(--hue-primary), 70%, 50%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow: hidden;
+    /* App-like feel */
+    transition: background-color var(--transition-smooth), color var(--transition-smooth);
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-surface);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
